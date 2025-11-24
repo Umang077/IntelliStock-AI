@@ -1,198 +1,157 @@
-IntelliStock AI
-An Agentic AI–Powered Inventory Optimization Platform
-Table of Contents
+# IntelliStock AI  
+### Agentic AI–Powered Inventory Optimization Platform
 
-Introduction
+---
 
-How It Works
+# Table of Contents
+- [Introduction](#introduction)
+- [How It Works](#how-how-it-works)
+- [Features](#features)
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Future Enhancements](#future-enhancements)
+- [Contributing](#contributing)
+- [License](#license)
 
-Features
+---
 
-Architecture
+## Introduction
+**IntelliStock AI** is an intelligent, AI-assisted inventory management platform designed for retail stores handling 5,000+ SKUs.
 
-Installation
+Most inventory systems only record stock levels — IntelliStock AI goes further by integrating **Agentic AI (LangChain + OpenAI)** to:
+- Predict stock-outs  
+- Generate automated purchase order suggestions  
+- Provide human-friendly explanations  
+- Reduce manual stock review time  
 
-Usage
+The platform has been successfully tested in **2+ live retail store pilots**, significantly improving stock monitoring efficiency.
 
-Technologies Used
+---
 
-Future Enhancements
+## How It Works
+IntelliStock AI analyzes SKU trends, usage patterns, vendor lead times, and movement history using an intelligent multi-step agent.
 
-Contributing
+1. **Collect Data**  
+   SKU metadata, historical logs, and stock levels are stored in MongoDB.
 
-License
+2. **AI Reasoning via LangChain**  
+   LangChain retrieves SKU data, processes it, and triggers reasoning workflows.
 
-Introduction
+3. **OpenAI Analysis**  
+   OpenAI generates insights, forecasts, and reorder suggestions based on structured input.
 
-IntelliStock AI is an intelligent, AI-assisted inventory management platform designed for retail stores that handle thousands of SKUs.
-Unlike traditional inventory systems that only record stock levels, IntelliStock AI uses Agentic AI (LangChain + OpenAI) to:
+4. **Dynamic Insights Dashboard**  
+   The UI shows actionable insights, alerts, and suggested purchase orders.
 
-Predict stock-out timelines
+---
 
-Generate automated purchase order suggestions
+## Features
+- **Agentic AI Assistant**  
+  Predicts demand, stock-out dates, and reorder quantities.
 
-Provide actionable business insights
+- **AI-Generated Operational Insights**  
+  Explanation-based summaries powered by OpenAI.
 
-Reduce manual stock review time
+- **Real-Time Inventory Monitoring**  
+  Track SKUs and movement across store locations.
 
-This platform has been tested in 2+ retail store pilot deployments, significantly improving forecasting accuracy and operational efficiency.
+- **Secure Authentication**  
+  Role-based access for store managers.
 
-How It Works
+- **Pilot Tested in Real Stores**  
+  Used in **2+ store locations**, increasing forecasting accuracy by **35%**.
 
-IntelliStock AI leverages LangChain and OpenAI to simulate a decision-making agent capable of analyzing inventory trends and recommending actions.
+---
 
-Workflow Overview
-
-Data Collection
-Live stock levels, SKU metadata, and historical movement logs are stored in MongoDB.
-
-AI Processing (Agentic Reasoning)
-
-LangChain retrieves SKU data
-
-Prepares structured input for OpenAI
-
-Calls smart “tools” for forecasting and reorder calculations
-
-Demand Forecasting
-The AI analyzes:
-
-Recent sales
-
-SKU movement patterns
-
-Vendor lead times
-
-Seasonal demand fluctuations
-
-Recommendation Generation
-OpenAI produces:
-
-Stock-out predictions
-
-Optimal reorder quantity suggestions
-
-Plain-language explanations for store owners
-
-Actionable Insights Dashboard
-The frontend displays:
-
-AI-generated insights
-
-Forecast metrics
-
-Suggested purchase orders
-
-Features
-
-Agentic AI Assistant
-Predicts demand, forecasts stock-outs, and generates reorder suggestions.
-
-Real-Time Inventory Visibility
-Track SKU levels and movement in real time.
-
-AI-Generated Insights
-Provides human-readable insights using OpenAI for quick decision-making.
-
-Multi-Store Ready
-Designed to scale across multiple retail locations.
-
-Secure Authentication
-Protected routes and secure login for store managers and admins.
-
-Pilot Tested in Real Stores
-Used in 2+ retail stores, improving forecasting by 35%.
-
-Architecture
+## Architecture
 Frontend (React.js)
-    |
-    |--> REST API calls
-    |
+|
+|--> REST API Calls
+|
 Backend (Node.js + Express)
-    |
-    |--> LangChain Agent
-    |--> OpenAI API
-    |
-MongoDB (SKU Data + Logs)
-AWS (EC2 for hosting, S3 for media storage)
+|
+|--> LangChain Agent
+|--> OpenAI API
+|
+MongoDB (SKU Data)
+AWS EC2 (Deployment) + AWS S3 (Media Storage)
 
-AI Layer
+yaml
+Copy code
 
-LangChain “tools” for:
+### AI Layer:
+- LangChain Tools:  
+  - SKU history fetch  
+  - Demand forecasting  
+  - Reorder calculation  
+- OpenAI LLM for reasoning  
+- Multi-step orchestration for agent workflows  
 
-SKU history retrieval
+---
 
-Demand forecasting
+## 🛠️ Installation
 
-Reorder point calculation
-
-OpenAI LLM for reasoning + explanations
-
-Chain orchestration for multi-step workflows
-
-Installation
-1. Clone the repository
+### 1. Clone the Repository
+```bash
 git clone https://github.com/Umang077/IntelliStock-AI.git
 cd IntelliStock-AI
-
-2. Install backend dependencies
+2. Install Backend Dependencies
+bash
+Copy code
 npm install
-
-3. Set up environment variables
-
+3. Add Environment Variables
 Create a .env file:
 
+ini
+Copy code
 OPENAI_API_KEY=your_key
-MONGO_URI=your_mongo_uri
-JWT_SECRET=your_secret
+MONGO_URI=your_mongo_connection_string
+JWT_SECRET=your_secret_key
 AWS_BUCKET=your_bucket_name
-
-4. Run the backend
+4. Start the Backend Server
+bash
+Copy code
 npm start
+5. Run the Frontend
+If frontend is separate:
 
-5. Run the frontend (if separate)
+bash
+Copy code
 npm run dev
+▶️ Usage
+Log in using store admin credentials
 
-Usage
+Add or update SKU inventory
 
-Login using your admin/store credentials
+Navigate to the AI Insights dashboard
 
-Add or update inventory stock
+View predictions, reorder suggestions, and explanations
 
-Open the AI Insights Dashboard
-
-View:
-
-Stock-out predictions
-
-Suggested reorder quantities
-
-AI-powered explanations
-
-Download or export purchase order drafts
+Export or modify purchase order drafts
 
 Technologies Used
-
 OpenAI API – Natural language reasoning
 
-LangChain – Agent tools & workflow orchestration
+LangChain – Agent orchestration + tools
 
-React.js – Frontend interface
+React.js – Frontend UI
 
-Node.js + Express – Backend APIs
+Node.js + Express.js – API backend
 
-MongoDB – Data storage
+MongoDB Atlas – Database
 
-AWS EC2 & S3 – Hosting and media storage
+AWS EC2 & S3 – Hosting & storage
 
-🔮 Future Enhancements
+Future Enhancements
+Multi-agent workflows (procurement + vendor AI)
 
-Multi-agent workflows for vendor communication
+Auto email purchase orders
 
-Automated purchase order emailing
+Temporal forecasting using ML models
 
-Sales forecasting with hybrid ML models
+KPI & profitability dashboards
 
-KPI dashboards and profitability analytics
+Multi-store analytics
 
-Role-based AI access levels
