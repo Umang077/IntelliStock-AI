@@ -1,0 +1,206 @@
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.big-container {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+  height: auto;
+  width: 55%;
+  /* width: 600px; */
+  /* min-width: auto; */
+}
+
+.card {
+  text-align: start;
+  box-shadow: 0 5px 25px 2px rgba(0, 0, 0, 0.11);
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 1rem 0.8rem;
+  /* width: 225.6px; */
+  height: 282px;
+  margin-top: 40px;
+  margin-right: 10px;
+  width: 32%;
+  /* text-align: start;
+  box-shadow: 0 5px 25px 2px rgba(0, 0, 0, 0.11);
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 1rem 0.8rem;
+  width: 225.6px;
+  height: 282px;  */
+}
+.card img {
+  height: 175px;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.card img {
+  width: 100%;
+  transition: 0.3s ease-in-out;
+  border-radius: 7px;
+}
+.card:hover img {
+  transform: scale(1.07);
+}
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.07);
+  transition: transform 0.7s ease;
+}
+.card h3 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.card-buttons a {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in;
+}
+.card-buttons a:hover {
+  background-color: #f0f0f0;
+}
+.card-buttons a.delete-button {
+  background-color: #ff6b6b;
+  color: white;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.45);
+}
+.card-buttons a.edit-button {
+  background-color: #6b7cff;
+  color: white;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.45);
+}
+.add-card {
+  margin-top: 15px;
+}
+.edit-text {
+  padding-right: 30px;
+}
+@media screen and (max-width: 850px) {
+  .NavbarItems {
+    z-index: 99;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #fff;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    align-items: stretch;
+    padding: 80px 0 30px 0;
+    margin: 0;
+    transition: 0.3s ease-in-out;
+    border-radius: 13px;
+  }
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-links {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+  }
+  .nav-links:rover {
+    background: #01959a;
+    transition: none;
+  }
+  .add-card {
+    display: inline;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.45);
+  }
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: auto;
+    border-radius: 4px;
+    width: 80%;
+    background: #01959a;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .menu-icons {
+    display: block;
+    cursor: pointer;
+  }
+  .menu-icons i {
+    font-size: 1.2rem;
+    color: #222;
+  }
+}
+
+.product {
+  margin: 4rem 6rem;
+  color: #2a2a2a;
+}
+.product h1 {
+  font-size: 3rem;
+}
+.tripcard1 {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.t-card1 {
+  /* width: 32%; */
+  text-align: start;
+  box-shadow: 0 5px 25px 2px rgba(0, 0, 0, 0.11);
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 1rem 0.8rem;
+  width: 225.6px;
+  height: 282px;
+}
+.t-image1 {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 7px;
+}
+.t-image1 img {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease-in-out;
+  border-radius: 7px;
+}
+.t-image1:hover img {
+  transform: scale(1.3);
+}
+.t-card h4 {
+  font-size: 1.3rem;
+  padding: 0.9rem 0 0.2rem 0;
+}
+@media screen and (max-width: 850px) {
+  .product {
+    margin: 4rem 2rem;
+  }
+  .tripcard1 {
+    flex-direction: column;
+  }
+  .t-card1 {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
