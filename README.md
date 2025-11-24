@@ -93,8 +93,7 @@ Copy code
 
 ## 🛠️ Installation
 
-### 1. Clone the Repository
-```bash
+### 1. Clone the Repository:
 git clone https://github.com/Umang077/IntelliStock-AI.git
 cd IntelliStock-AI
 2. Install Backend Dependencies
@@ -120,38 +119,24 @@ If frontend is separate:
 bash
 Copy code
 npm run dev
-▶️ Usage
-Log in using store admin credentials
 
-Add or update SKU inventory
+ 
+## 🧰 Technologies Used
 
-Navigate to the AI Insights dashboard
+- **OpenAI API** – Natural language reasoning  
+- **LangChain** – Agent orchestration + tool management  
+- **React.js** – Frontend UI  
+- **Node.js + Express.js** – Backend REST API  
+- **MongoDB Atlas** – Cloud database  
+- **AWS EC2 & S3** – Hosting & media storage  
 
-View predictions, reorder suggestions, and explanations
+---
 
-Export or modify purchase order drafts
+## 🔮 Future Enhancements
 
-Technologies Used
-OpenAI API – Natural language reasoning
-
-LangChain – Agent orchestration + tools
-
-React.js – Frontend UI
-
-Node.js + Express.js – API backend
-
-MongoDB Atlas – Database
-
-AWS EC2 & S3 – Hosting & storage
-
-Future Enhancements
-Multi-agent workflows (procurement + vendor AI)
-
-Auto email purchase orders
-
-Temporal forecasting using ML models
-
-KPI & profitability dashboards
-
-Multi-store analytics
+- Multi-agent workflows (procurement agent + vendor communication agent)  
+- Automated email-based purchase order dispatch  
+- Temporal and seasonal demand forecasting using ML models  
+- KPI dashboards for profitability and store performance  
+- Multi-store, cross-location analytics  
 
