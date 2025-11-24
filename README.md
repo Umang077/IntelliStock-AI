@@ -1,5 +1,5 @@
 # IntelliStock AI  
-### Agentic AI–Powered Inventory Optimization Platform
+### Agentic Stock Optimization Platform
 
 ---
 
@@ -103,21 +103,16 @@ npm install
 3. Add Environment Variables
 Create a .env file:
 
-ini
-Copy code
-OPENAI_API_KEY=your_key
+4. OPENAI_API_KEY=your_key
 MONGO_URI=your_mongo_connection_string
 JWT_SECRET=your_secret_key
 AWS_BUCKET=your_bucket_name
-4. Start the Backend Server
+5. Start the Backend Server
 bash
 Copy code
 npm start
-5. Run the Frontend
+6. Run the Frontend
 If frontend is separate:
-
-bash
-Copy code
 npm run dev
 
  
