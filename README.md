@@ -98,7 +98,6 @@ git clone https://github.com/Umang077/IntelliStock-AI.git
 cd IntelliStock-AI
 2. Install Backend Dependencies
 bash
-Copy code
 npm install
 3. Add Environment Variables
 Create a .env file:
@@ -108,8 +107,6 @@ MONGO_URI=your_mongo_connection_string
 JWT_SECRET=your_secret_key
 AWS_BUCKET=your_bucket_name
 5. Start the Backend Server
-bash
-Copy code
 npm start
 6. Run the Frontend
 If frontend is separate:
