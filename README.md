@@ -20,7 +20,7 @@
 ## Introduction
 **IntelliStock AI** is an intelligent, AI-assisted inventory management platform designed for retail stores handling 5,000+ SKUs.
 
-Most inventory systems only record stock levels — IntelliStock AI goes further by integrating **Agentic AI (LangChain + OpenAI)** to:
+Most inventory systems only record stock levels, IntelliStock AI goes further by integrating **Agentic AI (LangChain + OpenAI)** to:
 - Predict stock-outs  
 - Generate automated purchase order suggestions  
 - Provide human-friendly explanations  
