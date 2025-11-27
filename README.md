@@ -78,9 +78,6 @@ Backend (Node.js + Express)
 MongoDB (SKU Data)
 AWS EC2 (Deployment) + AWS S3 (Media Storage)
 
-yaml
-Copy code
-
 ### AI Layer:
 - LangChain Tools:  
   - SKU history fetch  
